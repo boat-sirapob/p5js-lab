@@ -54,14 +54,14 @@ export const displacedLinesSketch = (p: p5) => {
         p.createCanvas(CANVAS_SIZE, CANVAS_SIZE);
 
         pane.addBinding(params, "density", { min: 1, max: 2000, step: 1 });
-        pane.addBinding(params, "numLines", { min: 1, max: 100, step: 1 });
+        pane.addBinding(params, "numLines", { min: 1, max: 200, step: 1 });
         pane.addBinding(params, "maxDisplacement", { min: 0, max: 200, step: 1 });
         pane.addBinding(params, "noiseScale", { min: 0, max: 1, step: 0.01 });
         pane.addBinding(params, "positionXScaleFactor", { min: 0, max: 1, step: 0.01 });
         pane.addBinding(params, "positionYScaleFactor", { min: 0, max: 1, step: 0.01 });
         pane.addBinding(params, "positionXOffset", { min: -1, max: 1, step: 0.01 });
         pane.addBinding(params, "positionYOffset", { min: -1, max: 1, step: 0.01 });
-        pane.addBinding(params, "prevScale", { min: 0, max: 1, step: 0.01 });
+        pane.addBinding(params, "prevScale", { min: 0, max: 1, step: 0.001 });
     };
 
     p.draw = () => {
