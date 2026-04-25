@@ -5,5 +5,6 @@ import { repeatedLinesSketch } from "./sketches/repeatedLines";
 import { rotatedLines2Sketch } from "./sketches/rotatedLines2";
 import { rotatedLinesSketch } from "./sketches/rotatedLines";
 import { straightLinesSketch } from "./sketches/straightLines";
+import { treeSketch } from "./sketches/tree";
 
-new p5(repeatedLinesSketch);
+new p5(treeSketch);
