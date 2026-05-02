@@ -98,29 +98,6 @@ export const treeSketch = (p: p5) => {
         _tree(rootX, rootY, angle, length, width, depth);
     }
 
-    function invertRect(x: number, y: number, w: number, h: number) {
-        withInverted(() => {
-            p.rect(x - w / 2, y - h / 2, w, h);
-        });
-    }
-
-    function invertCircle(x: number, y: number, r: number) {
-        withInverted(() => {
-            p.ellipse(x, y, r);
-        });
-    }
-
-    function withInverted(drawFn: () => void) {
-        p.push();
-        p.blendMode(p.DIFFERENCE);
-        p.fill(255);
-        p.noStroke();
-
-        drawFn();
-
-        p.pop();
-    }
-
     function drawScene() {
         tree(
             CANVAS_SIZE / 2,
@@ -139,9 +116,6 @@ export const treeSketch = (p: p5) => {
             p.color(`rgba(${params.leafColor.r}, ${params.leafColor.g}, ${params.leafColor.b}, ${params.leafOpacity})`),
             params.leafRadius,
         );
-
-        // invertRect(CANVAS_SIZE / 2, CANVAS_SIZE / 2, 300, 300);
-        // invertCircle(CANVAS_SIZE / 2, CANVAS_SIZE - 200, 400);
     }
 
     p.setup = () => {
