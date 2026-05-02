@@ -5,6 +5,7 @@ import { repeatedLinesSketch } from "./sketches/repeatedLines";
 import { rotatedLines2Sketch } from "./sketches/rotatedLines2";
 import { rotatedLinesSketch } from "./sketches/rotatedLines";
 import { straightLinesSketch } from "./sketches/straightLines";
+import { tileArcSketch } from "./sketches/tileArc";
 import { treeSketch } from "./sketches/tree";
 
-new p5(treeSketch);
+new p5(tileArcSketch);
